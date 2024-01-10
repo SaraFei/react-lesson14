@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { saveEditedBook } from "../src/store/actions/book-actions"
+import { saveEditedBook } from "./book.js";
 import { useState } from "react";
 
 const EditBookDetails = () => {
-    let booktoEdit = useSelector(state => state.selectedBookToEdit);
+    let booktoEdit = useSelector(state => state.libraryBookState.selectedBookToEdit);
     let dispatch = useDispatch();
     let [details, setDetails] = useState({ ...booktoEdit });
     const change = (e) => {

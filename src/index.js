@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import {store} from "./app/store"
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from '@redux-devtools/extension';
 
-import { bookReducer } from './store/reducer/book';
 
-const myStore = createStore(bookReducer,composeWithDevTools());
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Provider store={myStore}>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>

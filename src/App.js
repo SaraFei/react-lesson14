@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import BookList from './components/BookList';
+import BookList from './library/BookList';
 
 import { useSelector } from 'react-redux';
-import EditBookDetails from './EditBookDetails';
+import EditBookDetails from './library/EditBookDetails';
 
 function App() {
-  let selectedBookToEdit = useSelector(state => state.selectedBookToEdit);
+  let selectedBookToEdit = useSelector(state => state.libraryBookState.selectedBookToEdit);
   return (
     <>
       <BookList />

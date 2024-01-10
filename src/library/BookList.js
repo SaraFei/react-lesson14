@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const BookList = () => {
     let [flag, setFlag] = useState(false);
-    let bookArr = useSelector((state) => { return state.bookArr });
+    let bookArr = useSelector((state) => { return state.libraryBookState.bookArr });
     return (
         <>
             <h1>כל הספרים</h1>
